@@ -1,0 +1,13 @@
+---
+
+- hosts: "{{ host_group }}" 
+  tasks:
+       - name: copy file from controller to target 
+         ansible.builtin.copy:
+             src: file1
+             dest: /tmp/file1
+
+       - name: Copy file2 to target machine 
+         ansible.builtin.copy:
+             src: file2
+             dest: /tmp/file2
